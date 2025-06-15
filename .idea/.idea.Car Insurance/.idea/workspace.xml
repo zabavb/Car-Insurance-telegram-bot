@@ -7,16 +7,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8fb83ad8-62d2-4cac-8982-7df65c2bb64d" name="Changes" comment="" />
+    <list default="true" id="8fb83ad8-62d2-4cac-8982-7df65c2bb64d" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Car Insurance/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Car Insurance/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Car Insurance/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Car Insurance/Program.cs" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="DpaMonitoringSettings">
+    <option name="firstShow" value="false" />
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="feature/stage1" />
+        <entry key="$PROJECT_DIR$" value="master" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -34,7 +40,10 @@
   }
 }</component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="mock://E:/Car-Insurance/Car Insurance/Car Insurance/Program.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/88b338246f59cffdb6f3dc3d8dbcfc169599dc71d6f44a8f2732983db7f73a/AuthenticationHeaderValue.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://E:/Car-Insurance/Car Insurance/Car Insurance/ExtractedData.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://E:/Car-Insurance/Car Insurance/Car Insurance/HuggingFaceResponse.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://E:/Car-Insurance/Car Insurance/Car Insurance/HuggingFaceResponse.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://E:/Car-Insurance/Car Insurance/Car Insurance/Program.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
@@ -47,21 +56,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    ".NET Project.Car Insurance.executor": "Run",
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "XThreadsFramesViewSplitterKey": "0.95669293",
+    "git-widget-placeholder": "feature/rest-stages",
+    "ignore.virus.scanning.warn.message": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RunManager">
     <configuration name="Car Insurance" type="DotNetProject" factoryName=".NET Project">
       <option name="EXE_PATH" value="" />
@@ -95,6 +108,8 @@
       <option name="presentableId" value="Default" />
       <updated>1749893468066</updated>
       <workItem from="1749893472945" duration="540000" />
+      <workItem from="1749894045520" duration="6528000" />
+      <workItem from="1749974287425" duration="23953000" />
     </task>
     <task id="LOCAL-00001" summary="IDEs' properties.">
       <option name="closed" value="true" />
@@ -112,7 +127,39 @@
       <option name="project" value="LOCAL" />
       <updated>1749893906665</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="IDE's options.">
+      <option name="closed" value="true" />
+      <created>1749894153583</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1749894153583</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Implemented model ExtractedData for retrieving data from Passport scan, provided by Mindee.">
+      <option name="closed" value="true" />
+      <created>1750009945493</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1750009945494</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Included necessary dependencies such as:&#10;&#10;- Mindee v3.28 for document scanning;&#10;- QuestPDF v2024.3 for creation of PDF file.">
+      <option name="closed" value="true" />
+      <created>1750010063006</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1750010063006</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Implemented model HuggingFaceResponse for receiving response from HuggingFace API.">
+      <option name="closed" value="true" />
+      <created>1750010201068</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1750010201068</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -120,11 +167,18 @@
   </component>
   <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
   <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName=".env" />
+  </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="IDEs' properties." />
     <MESSAGE value="Implemented first stage:&#10;- Telegram bot initialization&#10;- Start message" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implemented first stage:&#10;- Telegram bot initialization&#10;- Start message" />
+    <MESSAGE value="IDE's options." />
+    <MESSAGE value="Implemented model ExtractedData for retrieving data from Passport scan, provided by Mindee." />
+    <MESSAGE value="Included necessary dependencies such as:&#10;&#10;- Mindee v3.28 for document scanning;&#10;- QuestPDF v2024.3 for creation of PDF file." />
+    <MESSAGE value="Implemented model HuggingFaceResponse for receiving response from HuggingFace API." />
+    <option name="LAST_COMMIT_MESSAGE" value="Implemented model HuggingFaceResponse for receiving response from HuggingFace API." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
