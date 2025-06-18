@@ -4,18 +4,25 @@ using QuestPDF.Infrastructure;
 
 namespace Car_Insurance.Services;
 
+/// <summary>
+/// Service for generating car insurance policy documents in PDF format.
+/// </summary>
 public sealed class PolicyService : IPolicyService
 {
+    /// <summary>
+    /// Generates a dummy car insurance policy PDF as a byte array.
+    /// </summary>
+    /// <returns>Generated PDF content as a byte array.</returns>
     public byte[] Generate()
     {
         QuestPDF.Settings.License = LicenseType.Community;
-
+        // Content
         var lines = new[]
         {
             "This dummy policy covers the insured vehicle against accidents and theft.",
             $"Issued: {DateTime.UtcNow:yyyy-MM-dd}"
         };
-
+        // PDF file generation
         var doc = Document.Create(container =>
         {
             container.Page(page =>

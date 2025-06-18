@@ -11,6 +11,16 @@ using Telegram.Bot.Types.ReplyMarkups;
 
 namespace Car_Insurance.Services;
 
+/// <summary>
+/// The main hosted service that manages Telegram Bot operations.
+/// Handles messages, document uploads, conversation flow, and AI integration.
+/// </summary>
+/// <param name="bot">Injected Telegram bot client.</param>
+/// <param name="store">In-memory conversation store for tracking user state.</param>
+/// <param name="ocr">OCR service for parsing passport documents.</param>
+/// <param name="policy">Service that generates policy PDF files.</param>
+/// <param name="chat">Service that integrates with an AI assistant.</param>
+/// <param name="log">Logger instance for diagnostic and error logging.</param>
 public sealed class BotService(
     ITelegramBotClient bot,
     IConversationStore store,
@@ -28,6 +38,11 @@ public sealed class BotService(
     private readonly ILogger<BotService> _log = log;
     private CancellationTokenSource? _cts;
 
+    /// <summary>
+    /// Initializes and starts the Telegram bot update listener.
+    /// </summary>
+    /// <param name="ct">Cancellation token used to stop the service gracefully.</param>
+    /// <returns>A completed task when the bot listener starts successfully.</returns>
     public Task StartAsync(CancellationToken ct)
     {
         _cts = CancellationTokenSource.CreateLinkedTokenSource(ct);
@@ -42,25 +57,38 @@ public sealed class BotService(
         return Task.CompletedTask;
     }
 
+    /// <summary>
+    /// Stops the Telegram bot
+    /// </summary>
+    /// <param name="ct">Cancellation token used to stop the service gracefully.</param>
+    /// <returns>A task that completes once the service stops.</returns>
     public async Task StopAsync(CancellationToken ct)
     {
         await _cts?.CancelAsync()!;
         _log.LogInformation("Bot service stopped.");
     }
 
+    /// <summary>
+    /// Handles all incoming updates from Telegram, including messages and callback queries.
+    /// </summary>
+    /// <param name="bot">Telegram bot client used to send and receive messages.</param>
+    /// <param name="u">The received update from Telegram.</param>
+    /// <param name="ct">Cancellation token for graceful task cancellation.</param>
+    /// <returns>A task representing the asynchronous operation.</returns>
     private async Task HandleUpdateAsync(ITelegramBotClient bot, Update u, CancellationToken ct)
     {
         switch (u.Type)
         {
-            //==========================================
             case UpdateType.CallbackQuery when u.CallbackQuery == null:
                 return;
+
+            // Checking user's response on correctness of extracted data from documents 
             case UpdateType.CallbackQuery:
             {
                 var callback = u.CallbackQuery;
                 var chatId = callback.Message!.Chat.Id;
 
-                if (callback.Data == "confirm_yes")
+                if (callback.Data == "confirm_yes") // If correct
                 {
                     await bot.SendMessage(chatId,
                         "✅ Information Confirmed!",
@@ -70,21 +98,22 @@ public sealed class BotService(
                         cancellationToken: ct);
 
                     var state = _store.Get(chatId);
-                    _store.Save(chatId, state with { CurrentStage = Stage.WaitingPrice });
+                    _store.Save(chatId, state with { CurrentStage = Stage.WaitingPrice }); // Step forward 
                 }
-                else if (callback.Data == "confirm_no")
+                else if (callback.Data == "confirm_no") // If incorrect
                 {
                     await bot.SendMessage(chatId,
                         "❌ Information Incorrect. Please resubmit your documents.",
                         cancellationToken: ct);
                     var state = _store.Get(chatId);
-                    _store.Save(chatId, state with { CurrentStage = Stage.WaitingPassport });
+                    _store.Save(chatId, state with { CurrentStage = Stage.WaitingPassport }); // Repeat image attachment
                 }
 
                 await bot.AnswerCallbackQuery(callback.Id, cancellationToken: ct);
                 return;
             }
-            
+
+            // If user sent text message (most of the time)
             case UpdateType.Message:
             {
                 var msg = u.Message!;
@@ -92,7 +121,7 @@ public sealed class BotService(
 
                 switch (state.CurrentStage)
                 {
-                    // ---------- First image ----------
+                    // Receiving first image
                     case Stage.WaitingPassport when msg.Photo is { Length: > 0 }:
                         var passport = await DownloadAsync(msg.Photo[^1], ct); // Downloading only first attachment
                         _store.Save(msg.Chat.Id, state with
@@ -106,7 +135,7 @@ public sealed class BotService(
                             cancellationToken: ct);
                         break;
 
-                    // ---------- Second image ----------
+                    // Receiving second image
                     case Stage.WaitingVehicleDoc when msg.Photo is { Length: > 0 }:
                         var vehicle = await DownloadAsync(msg.Photo[^1], ct);
                         _store.Save(msg.Chat.Id, state with
@@ -123,6 +152,7 @@ public sealed class BotService(
                             "🟣 Extracting data from documents, please wait.",
                             cancellationToken: ct);
 
+                        // Extracting data from images
                         var extracted = await _ocr.ParsePassportAsync(state.Passport!, ct);
 
                         var text = $"✅ We extracted the following information:\n" +
@@ -132,6 +162,7 @@ public sealed class BotService(
                                    $"- Vehicle IDs: {extracted.VehicleId}\n\n" +
                                    $"✨ Is this correct?";
 
+                        // Asking user if everything correct
                         var markup = new InlineKeyboardMarkup(
                         [
                             [
@@ -146,14 +177,14 @@ public sealed class BotService(
                             cancellationToken: ct);
                         break;
 
-                    // ---------- Price confirmation ----------
+                    // If user agreed with the price
                     case Stage.WaitingPrice when msg.Text?.Equals("yes", StringComparison.OrdinalIgnoreCase) == true:
                         _store.Save(msg.Chat.Id, state with { CurrentStage = Stage.Complete });
 
                         await bot.SendMessage(msg.Chat.Id,
                             "🎉 Great! Your policy will be issued shortly.",
                             cancellationToken: ct);
-
+                        // Proceed forward
                         var policy = _policy.Generate();
 
                         await bot.SendDocument(msg.Chat.Id,
@@ -165,9 +196,11 @@ public sealed class BotService(
                             "✨ Your policy is all set! If you have any questions, just let me know.",
                             cancellationToken: ct);
                         break;
+
+                    // If user haven't agreed with the price
                     case Stage.WaitingPrice when msg.Text?.Equals("yes", StringComparison.OrdinalIgnoreCase) == false:
                         _store.Save(msg.Chat.Id, state with { CurrentStage = Stage.WaitingPrice });
-
+                        // Asking to agree anyway
                         await bot.SendMessage(
                             msg.Chat.Id,
                             "❌ Sorry, we can’t proceed without your confirmation.\n" +
@@ -175,13 +208,17 @@ public sealed class BotService(
                             "Do you agree? (Yes/No)",
                             cancellationToken: ct);
                         break;
+
+                    // Joining AI assistant to conversation
                     case Stage.Complete:
-                        var resp = await _chat.AskAsync(msg.Text!, ct);
+                        var resp = await _chat.AskAsync(msg.Text!, ct); // Sending user's question to AI assistant
                         await bot.SendMessage(msg.Chat.Id,
                             resp,
                             cancellationToken: ct);
                         break;
+
                     default:
+                        // The beginning
                         if (msg.Text == "/start")
                         {
                             await bot.SendMessage(msg.Chat.Id,
@@ -189,6 +226,7 @@ public sealed class BotService(
                                 "Please submit a photo of your Passport first.",
                                 cancellationToken: ct);
                         }
+                        // In case of incorrect user's typo or misunderstanding we are asking to follow bot's instructions
                         else
                         {
                             await bot.SendMessage(msg.Chat.Id,
@@ -204,7 +242,14 @@ public sealed class BotService(
         }
     }
 
-    // ===== Error handler =====
+
+    /// <summary>
+    /// Logs and handles unexpected errors during bot execution.
+    /// </summary>
+    /// <param name="_">Unused: the bot client.</param>
+    /// <param name="ex">The exception that was thrown.</param>
+    /// <param name="__">Unused: cancellation token.</param>
+    /// <returns>A completed task after logging the error.</returns>
     private Task HandleErrorAsync(ITelegramBotClient _, Exception ex, CancellationToken __)
     {
         var err = ex switch
@@ -216,7 +261,12 @@ public sealed class BotService(
         return Task.CompletedTask;
     }
 
-    // ===== Helpers =====
+    /// <summary>
+    /// Downloads a user-submitted photo from Telegram.
+    /// </summary>
+    /// <param name="photo">The specific size variant of the photo to download.</param>
+    /// <param name="ct">Cancellation token for graceful task cancellation.</param>
+    /// <returns>A byte array containing the downloaded image.</returns>
     private async Task<byte[]> DownloadAsync(PhotoSize photo, CancellationToken ct)
     {
         await using var ms = new MemoryStream();
