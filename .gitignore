@@ -5,6 +5,7 @@
 
 # Credentials
 .env
+appsettings.Development.json
 
 # User-specific files
 *.rsuser
