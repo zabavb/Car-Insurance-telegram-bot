@@ -7,8 +7,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8fb83ad8-62d2-4cac-8982-7df65c2bb64d" name="Changes" comment="Replaced .env file with appsettings.json.">
-      <change afterPath="$PROJECT_DIR$/Car Insurance/Models/ConversationState.cs" afterDir="false" />
+    <list default="true" id="8fb83ad8-62d2-4cac-8982-7df65c2bb64d" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Car Insurance/Models/ExtractedData.cs" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Car Insurance/Models/Stage.cs" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Car Insurance/Options/ChatOptions.cs" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Car Insurance/Options/OcrOptions.cs" afterDir="false" />
@@ -21,11 +21,7 @@
       <change afterPath="$PROJECT_DIR$/Car Insurance/Services/Interfaces/IPolicyService.cs" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Car Insurance/Services/OcrService.cs" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Car Insurance/Services/PolicyService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Car Insurance/appsettings.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Car Insurance/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Car Insurance/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Car Insurance/Car Insurance.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Car Insurance/Car Insurance.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Car Insurance/ExtractedData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Car Insurance/Models/ExtractedData.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Car Insurance/ExtractedData.cs" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Car Insurance/HuggingFaceResponse.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Car Insurance/Models/HuggingFaceResponse.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Car Insurance/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Car Insurance/Program.cs" afterDir="false" />
     </list>
@@ -79,6 +75,7 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/a6b7f037ba7b44df80b8d3aa7e58eeb2e8e938/81/9fd7cf98/Byte.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/256914e79bf36c84fa5ccf3873228838c6ba79844f97185d522f051cc67/MindeeClientOptions.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/88b338246f59cffdb6f3dc3d8dbcfc169599dc71d6f44a8f2732983db7f73a/AuthenticationHeaderValue.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://E:/Car-Insurance/Car Insurance/Car Insurance/Program.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProjectColorInfo">{
@@ -147,7 +144,7 @@
       <workItem from="1750053601997" duration="9818000" />
       <workItem from="1750078533330" duration="1550000" />
       <workItem from="1750173300040" duration="7979000" />
-      <workItem from="1750230718815" duration="4465000" />
+      <workItem from="1750230718815" duration="4779000" />
     </task>
     <task id="LOCAL-00001" summary="IDEs' properties.">
       <option name="closed" value="true" />
@@ -205,7 +202,39 @@
       <option name="project" value="LOCAL" />
       <updated>1750010789105</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Replaced .env file with appsettings.json.">
+      <option name="closed" value="true" />
+      <created>1750240781254</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1750240781255</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Updated IDE properties.">
+      <option name="closed" value="true" />
+      <created>1750240852107</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1750240852107</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Included necessary packages:&#10;- Microsoft.Extensions.Hosting v9.0.6&#10;- Microsoft.Extensions.Http v9.0.6&#10;- Microsoft.Extensions.Options.DataAnnotations v9.0.6&#10;&#10;Set appsettings.json with appsettings.Development.json as accessible">
+      <option name="closed" value="true" />
+      <created>1750240996783</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1750240996783</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Created class for tracking chat's conversational stage.">
+      <option name="closed" value="true" />
+      <created>1750241062432</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1750241062432</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -226,7 +255,10 @@
     <MESSAGE value="Implemented model HuggingFaceResponse for receiving response from HuggingFace API." />
     <MESSAGE value="Minor-fixes to environment." />
     <MESSAGE value="Replaced .env file with appsettings.json." />
-    <option name="LAST_COMMIT_MESSAGE" value="Replaced .env file with appsettings.json." />
+    <MESSAGE value="Updated IDE properties." />
+    <MESSAGE value="Included necessary packages:&#10;- Microsoft.Extensions.Hosting v9.0.6&#10;- Microsoft.Extensions.Http v9.0.6&#10;- Microsoft.Extensions.Options.DataAnnotations v9.0.6&#10;&#10;Set appsettings.json with appsettings.Development.json as accessible" />
+    <MESSAGE value="Created class for tracking chat's conversational stage." />
+    <option name="LAST_COMMIT_MESSAGE" value="Created class for tracking chat's conversational stage." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
