@@ -8,6 +8,10 @@
 
 <hr />
 
+<h2>🖼️ <a href="Example">Examples <i>(screenshots)</i></a></h2>
+
+<hr />
+
 <h2>🧱 Technologies Used</h2>
 <ul>
   <li><strong>.NET 9.0</strong></li>
