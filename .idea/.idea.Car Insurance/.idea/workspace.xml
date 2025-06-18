@@ -7,23 +7,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8fb83ad8-62d2-4cac-8982-7df65c2bb64d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Car Insurance/Models/ExtractedData.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Car Insurance/Models/Stage.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Car Insurance/Options/ChatOptions.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Car Insurance/Options/OcrOptions.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Car Insurance/Services/BotService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Car Insurance/Services/ChatService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Car Insurance/Services/ConversationStore.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Car Insurance/Services/Interfaces/IChatService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Car Insurance/Services/Interfaces/IConversationStore.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Car Insurance/Services/Interfaces/IOcrService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Car Insurance/Services/Interfaces/IPolicyService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Car Insurance/Services/OcrService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Car Insurance/Services/PolicyService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Car Insurance/ExtractedData.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Car Insurance/HuggingFaceResponse.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Car Insurance/Models/HuggingFaceResponse.cs" afterDir="false" />
+    <list default="true" id="8fb83ad8-62d2-4cac-8982-7df65c2bb64d" name="Changes" comment="Implemented XML documentation to all services and little comments between the lines for easier code navigation.">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Car Insurance/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Car Insurance/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Car Insurance/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Car Insurance/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Car Insurance/Services/BotService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Car Insurance/Services/BotService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Car Insurance/Services/ChatService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Car Insurance/Services/ChatService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Car Insurance/Services/ConversationStore.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Car Insurance/Services/ConversationStore.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Car Insurance/Services/OcrService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Car Insurance/Services/OcrService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Car Insurance/Services/PolicyService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Car Insurance/Services/PolicyService.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,7 +66,8 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/a6b7f037ba7b44df80b8d3aa7e58eeb2e8e938/81/9fd7cf98/Byte.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/256914e79bf36c84fa5ccf3873228838c6ba79844f97185d522f051cc67/MindeeClientOptions.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/88b338246f59cffdb6f3dc3d8dbcfc169599dc71d6f44a8f2732983db7f73a/AuthenticationHeaderValue.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://E:/Car-Insurance/Car Insurance/Car Insurance/Program.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/e32555a65e7d358a6feb31e4c4978f57bd596d71f8d7264257bdca3612e73c/MindeeClient.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://E:/Car-Insurance/Car Insurance/Car Insurance/Services/BotService.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProjectColorInfo">{
@@ -87,25 +79,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    ".NET Project.Car Insurance.executor": "Run",
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "XThreadsFramesViewSplitterKey": "0.9541985",
-    "git-widget-placeholder": "feature/divide-into-services",
-    "ignore.virus.scanning.warn.message": "true",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;.NET Project.Car Insurance.executor&quot;: &quot;Run&quot;,
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;XThreadsFramesViewSplitterKey&quot;: &quot;0.9541985&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;feature/docs&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="Car Insurance" type="DotNetProject" factoryName=".NET Project">
       <option name="EXE_PATH" value="" />
@@ -145,6 +137,7 @@
       <workItem from="1750078533330" duration="1550000" />
       <workItem from="1750173300040" duration="7979000" />
       <workItem from="1750230718815" duration="4779000" />
+      <workItem from="1750267852680" duration="1326000" />
     </task>
     <task id="LOCAL-00001" summary="IDEs' properties.">
       <option name="closed" value="true" />
@@ -258,7 +251,8 @@
     <MESSAGE value="Updated IDE properties." />
     <MESSAGE value="Included necessary packages:&#10;- Microsoft.Extensions.Hosting v9.0.6&#10;- Microsoft.Extensions.Http v9.0.6&#10;- Microsoft.Extensions.Options.DataAnnotations v9.0.6&#10;&#10;Set appsettings.json with appsettings.Development.json as accessible" />
     <MESSAGE value="Created class for tracking chat's conversational stage." />
-    <option name="LAST_COMMIT_MESSAGE" value="Created class for tracking chat's conversational stage." />
+    <MESSAGE value="Implemented XML documentation to all services and little comments between the lines for easier code navigation." />
+    <option name="LAST_COMMIT_MESSAGE" value="Implemented XML documentation to all services and little comments between the lines for easier code navigation." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
