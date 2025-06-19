@@ -7,8 +7,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8fb83ad8-62d2-4cac-8982-7df65c2bb64d" name="Changes" comment="Implemented XML documentation to all services and little comments between the lines for easier code navigation.">
+    <list default="true" id="8fb83ad8-62d2-4cac-8982-7df65c2bb64d" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Car Insurance/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Car Insurance/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Car Insurance/Services/BotService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Car Insurance/Services/BotService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Car Insurance/Services/ChatService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Car Insurance/Services/ChatService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Car Insurance/Services/Interfaces/IChatService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Car Insurance/Services/Interfaces/IChatService.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,7 +31,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="feature/docs" />
+        <entry key="$PROJECT_DIR$" value="master" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -62,6 +65,8 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/88b338246f59cffdb6f3dc3d8dbcfc169599dc71d6f44a8f2732983db7f73a/AuthenticationHeaderValue.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/e32555a65e7d358a6feb31e4c4978f57bd596d71f8d7264257bdca3612e73c/MindeeClient.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="mock://E:/Car-Insurance/Car Insurance/Car Insurance/Services/BotService.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://E:/Car-Insurance/Car Insurance/Car Insurance/Services/ChatService.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://E:/Car-Insurance/Car Insurance/Car Insurance/Services/Interfaces/IChatService.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProjectColorInfo">{
@@ -82,7 +87,7 @@
     "RunOnceActivity.git.unshallow": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "XThreadsFramesViewSplitterKey": "0.9541985",
-    "git-widget-placeholder": "master",
+    "git-widget-placeholder": "feature/extend-assistant",
     "ignore.virus.scanning.warn.message": "true",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -132,6 +137,8 @@
       <workItem from="1750173300040" duration="7979000" />
       <workItem from="1750230718815" duration="4779000" />
       <workItem from="1750267852680" duration="1326000" />
+      <workItem from="1750318553720" duration="868000" />
+      <workItem from="1750334741318" duration="5335000" />
     </task>
     <task id="LOCAL-00001" summary="IDEs' properties.">
       <option name="closed" value="true" />
@@ -221,7 +228,15 @@
       <option name="project" value="LOCAL" />
       <updated>1750241062432</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Inserted images for showing them as an example of use.">
+      <option name="closed" value="true" />
+      <created>1750272600423</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1750272600423</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -246,7 +261,8 @@
     <MESSAGE value="Included necessary packages:&#10;- Microsoft.Extensions.Hosting v9.0.6&#10;- Microsoft.Extensions.Http v9.0.6&#10;- Microsoft.Extensions.Options.DataAnnotations v9.0.6&#10;&#10;Set appsettings.json with appsettings.Development.json as accessible" />
     <MESSAGE value="Created class for tracking chat's conversational stage." />
     <MESSAGE value="Implemented XML documentation to all services and little comments between the lines for easier code navigation." />
-    <option name="LAST_COMMIT_MESSAGE" value="Implemented XML documentation to all services and little comments between the lines for easier code navigation." />
+    <MESSAGE value="Inserted images for showing them as an example of use." />
+    <option name="LAST_COMMIT_MESSAGE" value="Inserted images for showing them as an example of use." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
