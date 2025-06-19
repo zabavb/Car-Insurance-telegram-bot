@@ -119,6 +119,19 @@ public sealed class BotService(
                 var msg = u.Message!;
                 var state = _store.Get(msg.Chat.Id);
 
+                // If message is text and doesn't match required flow triggers (like 'yes')
+                // use AI assistant to respond to it
+                if (msg.Text is not null &&
+                    !msg.Text.Equals("yes", StringComparison.OrdinalIgnoreCase) &&
+                    !msg.Text.Equals("no", StringComparison.OrdinalIgnoreCase) &&
+                    !msg.Text.StartsWith('/')) // Avoid pre-defined inputs (Example: "/start")
+                {
+                    var resp = await _chat.AskAsync(msg.Text, state.CurrentStage, ct);
+                    await bot.SendMessage(msg.Chat.Id, resp, cancellationToken: ct);
+                    return;
+                }
+
+
                 switch (state.CurrentStage)
                 {
                     // Receiving first image
@@ -210,12 +223,12 @@ public sealed class BotService(
                         break;
 
                     // Joining AI assistant to conversation
-                    case Stage.Complete:
+                    /*case Stage.Complete:
                         var resp = await _chat.AskAsync(msg.Text!, ct); // Sending user's question to AI assistant
                         await bot.SendMessage(msg.Chat.Id,
                             resp,
                             cancellationToken: ct);
-                        break;
+                        break;*/
 
                     default:
                         // The beginning
