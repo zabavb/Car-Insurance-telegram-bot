@@ -1,6 +1,6 @@
-﻿using Car_Insurance.Options;
-using Car_Insurance.Services;
-using Car_Insurance.Services.Interfaces;
+﻿using CarInsurance.Options;
+using CarInsurance.Services;
+using CarInsurance.Services.Interfaces;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;

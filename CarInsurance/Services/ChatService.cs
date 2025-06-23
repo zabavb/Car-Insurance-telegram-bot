@@ -1,13 +1,13 @@
 ﻿using System.Net.Http.Headers;
 using System.Net.Http.Json;
 using System.Text.Json;
-using Car_Insurance.Models;
-using Car_Insurance.Options;
-using Car_Insurance.Services.Interfaces;
+using CarInsurance.Models;
+using CarInsurance.Options;
+using CarInsurance.Services.Interfaces;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 
-namespace Car_Insurance.Services;
+namespace CarInsurance.Services;
 
 /// <summary>
 /// Service for communicating with an AI assistant (Hugging Face) to generate answers to user queries.

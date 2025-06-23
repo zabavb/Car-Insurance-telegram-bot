@@ -1,4 +1,4 @@
-﻿namespace Car_Insurance.Models;
+﻿namespace CarInsurance.Models;
 
 public record ConversationState(
     Stage CurrentStage = Stage.WaitingPassport,

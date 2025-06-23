@@ -8,8 +8,32 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8fb83ad8-62d2-4cac-8982-7df65c2bb64d" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Car Insurance/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Car Insurance/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fly.toml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/CarInsurance/CarInsurance.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Car Insurance/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Car Insurance/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Car Insurance/.idea/indexLayout.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Car Insurance/.idea/projectSettingsUpdater.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Car Insurance/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Car Insurance/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Car Insurance.sln" beforeDir="false" afterPath="$PROJECT_DIR$/CarInsurance.sln" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Car Insurance/Car Insurance.csproj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Car Insurance/Models/ConversationState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CarInsurance/Models/ConversationState.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Car Insurance/Models/ExtractedData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CarInsurance/Models/ExtractedData.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Car Insurance/Models/HuggingFaceResponse.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CarInsurance/Models/HuggingFaceResponse.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Car Insurance/Models/Stage.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CarInsurance/Models/Stage.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Car Insurance/Options/ChatOptions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CarInsurance/Options/ChatOptions.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Car Insurance/Options/OcrOptions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CarInsurance/Options/OcrOptions.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Car Insurance/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CarInsurance/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Car Insurance/Services/BotService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CarInsurance/Services/BotService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Car Insurance/Services/ChatService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CarInsurance/Services/ChatService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Car Insurance/Services/ConversationStore.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CarInsurance/Services/ConversationStore.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Car Insurance/Services/Interfaces/IChatService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CarInsurance/Services/Interfaces/IChatService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Car Insurance/Services/Interfaces/IConversationStore.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CarInsurance/Services/Interfaces/IConversationStore.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Car Insurance/Services/Interfaces/IOcrService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CarInsurance/Services/Interfaces/IOcrService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Car Insurance/Services/Interfaces/IPolicyService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CarInsurance/Services/Interfaces/IPolicyService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Car Insurance/Services/OcrService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CarInsurance/Services/OcrService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Car Insurance/Services/PolicyService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CarInsurance/Services/PolicyService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Car Insurance/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/CarInsurance/appsettings.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -109,7 +133,7 @@
       <option name="RUNTIME_ARGUMENTS" value="" />
       <option name="AUTO_ATTACH_CHILDREN" value="0" />
       <option name="MIXED_MODE_DEBUG" value="0" />
-      <option name="PROJECT_PATH" value="$PROJECT_DIR$/Car Insurance/Car Insurance.csproj" />
+      <option name="PROJECT_PATH" value="$PROJECT_DIR$/CarInsurance/CarInsurance.csproj" />
       <option name="PROJECT_EXE_PATH_TRACKING" value="1" />
       <option name="PROJECT_ARGUMENTS_TRACKING" value="1" />
       <option name="PROJECT_WORKING_DIRECTORY_TRACKING" value="1" />
@@ -139,7 +163,7 @@
       <workItem from="1750334741318" duration="5335000" />
       <workItem from="1750489423184" duration="3000" />
       <workItem from="1750489852537" duration="2002000" />
-      <workItem from="1750665581240" duration="3485000" />
+      <workItem from="1750665581240" duration="5048000" />
     </task>
     <task id="LOCAL-00001" summary="IDEs' properties.">
       <option name="closed" value="true" />
@@ -261,7 +285,15 @@
       <option name="project" value="LOCAL" />
       <updated>1750668685296</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="#UPDATE_4">
+      <option name="closed" value="true" />
+      <created>1750669667971</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1750669667971</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -291,7 +323,8 @@
     <MESSAGE value="Implemented fly.io configuration file for hosting." />
     <MESSAGE value="Fly.io config file #UPDATE_1" />
     <MESSAGE value="#UPDATE_3" />
-    <option name="LAST_COMMIT_MESSAGE" value="#UPDATE_3" />
+    <MESSAGE value="#UPDATE_4" />
+    <option name="LAST_COMMIT_MESSAGE" value="#UPDATE_4" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -1,4 +1,4 @@
-﻿namespace Car_Insurance.Options;
+﻿namespace CarInsurance.Options;
 
 public class ChatOptions
 {

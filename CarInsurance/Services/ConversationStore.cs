@@ -1,8 +1,8 @@
 ﻿using System.Collections.Concurrent;
-using Car_Insurance.Models;
-using Car_Insurance.Services.Interfaces;
+using CarInsurance.Models;
+using CarInsurance.Services.Interfaces;
 
-namespace Car_Insurance.Services;
+namespace CarInsurance.Services;
 
 /// <summary>
 /// Store for tracking Telegram chat states.

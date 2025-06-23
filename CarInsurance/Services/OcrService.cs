@@ -1,13 +1,13 @@
-﻿using Car_Insurance.Models;
-using Car_Insurance.Options;
-using Car_Insurance.Services.Interfaces;
+﻿using CarInsurance.Models;
+using CarInsurance.Options;
+using CarInsurance.Services.Interfaces;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using Mindee;
 using Mindee.Input;
 using Mindee.Product.Passport;
 
-namespace Car_Insurance.Services;
+namespace CarInsurance.Services;
 
 /// <summary>
 /// Service that handles OCR parsing of passport images using the Mindee API.

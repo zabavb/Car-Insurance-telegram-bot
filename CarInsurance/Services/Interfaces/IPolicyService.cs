@@ -1,4 +1,4 @@
-﻿namespace Car_Insurance.Services.Interfaces;
+﻿namespace CarInsurance.Services.Interfaces;
 
 public interface IPolicyService
 {

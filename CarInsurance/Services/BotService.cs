@@ -1,5 +1,5 @@
-﻿using Car_Insurance.Models;
-using Car_Insurance.Services.Interfaces;
+﻿using CarInsurance.Models;
+using CarInsurance.Services.Interfaces;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Telegram.Bot;
@@ -9,7 +9,7 @@ using Telegram.Bot.Types;
 using Telegram.Bot.Types.Enums;
 using Telegram.Bot.Types.ReplyMarkups;
 
-namespace Car_Insurance.Services;
+namespace CarInsurance.Services;
 
 /// <summary>
 /// The main hosted service that manages Telegram Bot operations.

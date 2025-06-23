@@ -1,4 +1,4 @@
-﻿namespace Car_Insurance.Models;
+﻿namespace CarInsurance.Models;
 
 public class ExtractedData(string passportName, string passportSurname, string passportId, string vehicleId)
 {

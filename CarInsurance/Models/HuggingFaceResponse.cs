@@ -1,6 +1,6 @@
 ﻿using System.Text.Json.Serialization;
 
-namespace Car_Insurance.Models;
+namespace CarInsurance.Models;
 
 public class HuggingFaceResponse
 {

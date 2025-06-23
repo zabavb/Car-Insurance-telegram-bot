@@ -1,8 +1,8 @@
-﻿using Car_Insurance.Services.Interfaces;
+﻿using CarInsurance.Services.Interfaces;
 using QuestPDF.Fluent;
 using QuestPDF.Infrastructure;
 
-namespace Car_Insurance.Services;
+namespace CarInsurance.Services;
 
 /// <summary>
 /// Service for generating car insurance policy documents in PDF format.
@@ -28,7 +28,7 @@ public sealed class PolicyService : IPolicyService
             container.Page(page =>
             {
                 page.Margin(50);
-                page.Header().AlignCenter().Text("Car Insurance Policy").FontSize(20).Bold();
+                page.Header().AlignCenter().Text("CarInsurance Policy").FontSize(20).Bold();
                 page.Content().Text(txt =>
                 {
                     foreach (var line in lines)

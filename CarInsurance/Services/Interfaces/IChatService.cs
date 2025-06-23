@@ -1,6 +1,6 @@
-﻿using Car_Insurance.Models;
+﻿using CarInsurance.Models;
 
-namespace Car_Insurance.Services.Interfaces;
+namespace CarInsurance.Services.Interfaces;
 
 public interface IChatService
 {
