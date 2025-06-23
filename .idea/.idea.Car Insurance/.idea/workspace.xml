@@ -138,7 +138,7 @@
       <workItem from="1750334741318" duration="5335000" />
       <workItem from="1750489423184" duration="3000" />
       <workItem from="1750489852537" duration="2002000" />
-      <workItem from="1750665581240" duration="593000" />
+      <workItem from="1750665581240" duration="1994000" />
     </task>
     <task id="LOCAL-00001" summary="IDEs' properties.">
       <option name="closed" value="true" />
@@ -236,7 +236,15 @@
       <option name="project" value="LOCAL" />
       <updated>1750272600423</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Implemented fly.io configuration file for hosting.">
+      <option name="closed" value="true" />
+      <created>1750666876304</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1750666876304</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -245,6 +253,7 @@
   <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
   <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
   <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.toml" />
     <option featureType="com.intellij.fileTypeFactory" implementationName=".env" />
   </component>
   <component name="VcsManagerConfiguration">
@@ -262,7 +271,8 @@
     <MESSAGE value="Created class for tracking chat's conversational stage." />
     <MESSAGE value="Implemented XML documentation to all services and little comments between the lines for easier code navigation." />
     <MESSAGE value="Inserted images for showing them as an example of use." />
-    <option name="LAST_COMMIT_MESSAGE" value="Inserted images for showing them as an example of use." />
+    <MESSAGE value="Implemented fly.io configuration file for hosting." />
+    <option name="LAST_COMMIT_MESSAGE" value="Implemented fly.io configuration file for hosting." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

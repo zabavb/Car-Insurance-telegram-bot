@@ -1,8 +1,8 @@
-﻿app = "Car Insurance Telegram Bot"
-primary_region = "ams"
+﻿app = "Car-Insurance-telegram-bot"
+primary_region = "waw"
 
 [build]
   builder = "paketobuildpacks/builder:base"
 
 [build.args]
-  BP_DOTNET_PROJECT_PATH = "Car Insurance/Car Insurance.csproj"
+  BP_DOTNET_PROJECT_PATH = "CarInsurance/CarInsurance.csproj"
