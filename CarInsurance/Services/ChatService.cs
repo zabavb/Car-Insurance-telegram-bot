@@ -52,6 +52,7 @@ public sealed class ChatService(
                       4. Complete – All stages are complete. You may answer general questions but avoid going off-topic.
 
                       The current stage is: {currentStage}.
+                      Your response is limited by 200 characters.
 
                       Now respond to the user message below in a helpful and polite tone.
 
